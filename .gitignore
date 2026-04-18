@@ -1,4 +1,5 @@
 # build artifacts
-*.exe
-*.dat
+**/*.exe
+**/*.dat
+build/
 
