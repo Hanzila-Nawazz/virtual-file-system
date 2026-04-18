@@ -1,8 +1,0 @@
-DIR:root
-DIR_ITEM:docs
-DIR:docs
-FILE:c.txt||0
-END_DIR
-FILE:b.txt||0
-FILE:a.txt|Hello OS Lab|12
-END_DIR
