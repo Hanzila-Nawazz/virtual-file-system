@@ -1,0 +1,10 @@
+Create file1.txt
+Write_to_file file1.txt, Hello from Thread 1
+Open file1.txt, READ
+Read_from_file file1.txt, 0, 20
+Mkdir folder1
+chDir folder1
+Create nested.txt
+Write_to_file nested.txt, Nested file content
+chDir ..
+Show_memory_map

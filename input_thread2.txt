@@ -1,0 +1,9 @@
+Create file2.txt
+Write_to_file file2.txt, Data from Thread 2
+Mkdir folder2
+chDir folder2
+Create data.txt
+Write_to_file data.txt, Thread 2 nested content
+chDir ..
+Move file2.txt, renamed_file2.txt
+Show_memory_map

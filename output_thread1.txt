@@ -1,0 +1,10 @@
+Opened file1.txt in READ mode.
+Hello from Thread 1
+file1.txt created successfully!
+folder1 directory created.
+nested.txt created successfully!
+Hello from Thread 1
+[DIR ] root
+    [DIR ] folder1
+        [FILE] nested.txt | size = 21
+    [FILE] file1.txt | size = 18

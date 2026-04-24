@@ -5,6 +5,7 @@
 #include "Directory.h"
 #include <memory>
 #include <fstream>
+#include <mutex>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ class FileSystem
     private:
     shared_ptr<Directory> root_directory;
     shared_ptr<Directory> current;
+    mutex fs_mutex;
 
     public:
     FileSystem();

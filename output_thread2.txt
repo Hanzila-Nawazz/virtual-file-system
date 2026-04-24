@@ -1,0 +1,9 @@
+file2.txt created successfully!
+folder2 directory created.
+data.txt created successfully!
+Thread 2 nested content
+Moved file2.txt to renamed_file2.txt successfully!
+[DIR ] root
+    [DIR ] folder2
+        [FILE] data.txt | size = 22
+    [FILE] renamed_file2.txt | size = 17

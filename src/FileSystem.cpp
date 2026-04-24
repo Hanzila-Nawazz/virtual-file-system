@@ -9,6 +9,7 @@ FileSystem::FileSystem()
 
 shared_ptr<File> FileSystem::createFile(string name)
 {
+    lock_guard<mutex> lock(fs_mutex);
     shared_ptr<File> newFile = make_shared<File>(name);
     current->contents[name] = newFile;
     cout<<name<<" created successfully!"<<endl;
@@ -17,6 +18,7 @@ shared_ptr<File> FileSystem::createFile(string name)
 
 void FileSystem::deleteFile(string name)
 {
+    lock_guard<mutex> lock(fs_mutex);
     auto it = current->contents.find(name);
 
     if(it != current->contents.end())
@@ -32,6 +34,7 @@ void FileSystem::deleteFile(string name)
 
 void FileSystem::makeDir(string name)
 {
+    lock_guard<mutex> lock(fs_mutex);
     shared_ptr<Directory> dir = make_shared<Directory>(name);
     dir->parent = current;
     current->contents[name] = dir;
@@ -39,6 +42,7 @@ void FileSystem::makeDir(string name)
 
 void FileSystem::changeDirectory(string name)
 {
+    lock_guard<mutex> lock(fs_mutex);
     if(name == "..")
     {
         if(current->parent != nullptr)
@@ -56,6 +60,7 @@ void FileSystem::changeDirectory(string name)
 
 shared_ptr<File> FileSystem::openFile(string name, string mode)
 {
+    lock_guard<mutex> lock(fs_mutex);
     auto it = current->contents.find(name);
 
     if(it != current->contents.end() && !it->second->getIsDirectory())
@@ -75,6 +80,7 @@ void FileSystem::closeFile(string name)
 
 void FileSystem::moveFile(string source, string target)
 {
+    lock_guard<mutex> lock(fs_mutex);
     auto it = current->contents.find(source);
 
     if(it != current->contents.end())

@@ -1,0 +1,72 @@
+
+Department of Computing
+
+
+
+CS 330: Operating Systems
+BESE: 15AB
+
+Lab 12: Threaded File Management System
+
+Date:  24 April 2026
+Time: 10:00 AM-01:00 PM & 02:00 PM-05:00 PM
+Instructor: Mr.Taufeeq Ur Rehman
+Lab Engineer: Shakeela
+
+
+
+
+Lab 13: Threaded File Management System
+Instructions
+You are allowed to form groups of up to 2 students per group.
+The code should be developed within the team and any form of plagiarism will automatically result in zero for both the groups involved without any questions asked.
+Each student is responsible to understand the code being submitted under his or her name.  Division of work is not explicitly required, however, each group member will be given average viva marks of the group. This implies that if a group member gets zero in viva and another gets full marks then both will score 50%.
+Any questions and comments on the lab must reach the faculty at least one day before the deadline through email or in person meeting. No questions will be answered after the said time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introduction
+The purpose of this lab is for you to convert your file system to threaded file system allowing multiple users to interact with the file system at the same time. For this lab you will be explicitly asked to launch k threads, where k will be a command line argument.  Each of the thread will execute certain commands developed in previous tasks before terminating. When all the threads would complete their execution then the program will close and exit.
+Each thread will read the instructions from a text file titled input_thread<x>.txt and redirect the output after execution of thread in file output_thread<x>.txt where x is the thread number
+The format for input file for each of the commands will be as following:
+Create <fname>
+Delete <fname>
+Mkdir <dirName>
+chDir <dirName>
+Move <source_fname, target_fname>
+Open <fName,mode>
+Close<Fname>
+Write_to_file <filename>, text
+Write_to_file <filename>,text, startLocation, size
+Read_from_file <filename,start,size
+fileObj.Truncate_file maxSize
+Show_memory_map
+
+You may require refactoring your design to accommodate changes. Please document the changes diligently.
+
+
+
+
+
+
+
+
+
+
+Deliverables
+Submission includes
+Complete code folder.
+Sample input_thread.txt and output_thread.txt files used for testing.
+Sample data file (sample.dat) consisting of files and directories to show your output.
+User guide to teach how to use your system. The user guide must include description of your directory structure.
